@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkWord(string,target){
+            var arr= string.split(" ");
+            var newArr=[];
+            var targetArr=[];
+            var result=true;
+            let k=0;
+            let i=0;
+            for(let j=0;j<arr[arr.length-1].length;j++){
+                if(arr[arr.length-1][j]==target[k]){
+                    targetArr.push(target[k]);          
+                    newArr.push(arr[arr.length-1][j]);
+                    if(targetArr!=newArr && target.length>arr[arr.length-1].length-i){
+                        result=false;
+                        break;
+                    }
+                    k++; 
+                }else{
+                    i++;
+                }
+            }
+            return result;
+        }
+        var string="hello world";
+        var target=prompt("nhap vao 1 tu bat ky");
+        console.log(checkWord(string,target));
+    </script>
+</body>
+</html>

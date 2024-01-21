@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let nums = [3, 4, 6, 1, 10];
+        let findElement = nums.find(function (e, i) {
+          return e === 5;
+        });
+        console.log(findElement);
+        function fakeFind(arr, fn) {
+          for (let i = 0; i < arr.length; i++) {
+            let test = fn(arr[i]);
+            if (test === true) {
+              return arr[i];
+            }
+          }
+        }
+        let res1 = fakeFind(nums, function (e) {
+          return e === 10;
+        });
+  
+        let res2 = fakeFind(nums, function (e) {
+          return e === 100;
+        });
+  
+        let res3 = fakeFind(nums, function (e) {
+          return e === 3;
+        }); 
+        console.log(res1);
+        console.log(res2);
+        console.log(res3);
+      </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function check(arr,n){
+            if(n<=arr.length){
+                return arr.slice(0,n)+"...";
+            }
+        }
+        var array="hello world";
+        var number=+prompt("nhap so luong ky tu");
+        console.log(check(array,number));
+    </script>
+</body>
+</html>

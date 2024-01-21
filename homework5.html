@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function chiaArr(array,number){
+            let arr=[];
+            let newArr=[];
+            let j=-1;
+            let k=Math.ceil(array.length/number);
+            for(let i=0;i<k;i++){
+                while(arr.length<number){
+                    j++;
+                    arr.push(array[j]);                
+                }
+                let i=arr.length-1;
+                while(arr[i]==undefined){
+                    arr.splice(i,1);
+                    i--;
+                }
+                newArr.push(arr);
+                arr=[];               
+            }
+            return newArr;
+        }
+        var array=[1,2,3,4,5,6,7,8,9,10];
+        var number=+prompt("nhap 1 so bat ky");
+        console.log(chiaArr(array,number));
+    </script>
+</body>
+</html>
